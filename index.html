@@ -8,9 +8,10 @@
 <body>
 
 	<div ng-app="searchApp" ng-controller="myCtrl">
-		<h1>Search for someone {{search}}</h1>
-
+		<h1>Search for someone</h1>
 		<input type="text" ng-model="search">
+		
+		<h3>Search results for {{search}}</h3>
 
 		<table>
 			<thead>
@@ -21,9 +22,9 @@
 			</thead>
 			<tbody>
 
-				<tr>
-					<td></td>
-					<td></td>
+				<tr ng-repeat="x in people">
+					<td>{{x.fname}}</td>
+					<td>{{x.lname}}</td>
 				</tr>
 
 			</tbody>
