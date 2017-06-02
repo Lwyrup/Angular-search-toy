@@ -15,6 +15,6 @@ app.controller('myCtrl', function($scope) {
 
 app.directive("searchStatus", function(){
 	return{
-		template: "<h3 ng-show='search'>Search results for {{search}}</h3>"
+		template: "<h3>Search results for {{search}}</h3>"
 	}
 });
