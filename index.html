@@ -11,24 +11,26 @@
 		<h1>Search for someone</h1>
 		<input type="text" ng-model="search">
 
-		<search-status></search-status>
+		<div ng-show="search">
+			<search-status></search-status>
 
-		<table>
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-				</tr>
-			</thead>
-			<tbody>
+			<table>
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+					</tr>
+				</thead>
+				<tbody>
 
-				<tr ng-repeat="x in people">
-					<td>{{x.fname}}</td>
-					<td>{{x.lname}}</td>
-				</tr>
+					<tr ng-repeat="x in people | filter:search">
+						<td>{{x.fname}}</td>
+						<td>{{x.lname}}</td>
+					</tr>
 
-			</tbody>
-		</table>
+				</tbody>
+			</table>
+		</div>
 	</div>
 
 
