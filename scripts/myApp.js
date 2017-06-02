@@ -12,3 +12,9 @@ app.controller('myCtrl', function($scope) {
 	    {fname:"Demetri", lname:"Martin"}
     ];
 });
+
+app.directive("searchStatus", function(){
+	return{
+		template: "<h3 ng-show='search'>Search results for {{search}}</h3>"
+	}
+});
