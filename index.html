@@ -23,7 +23,7 @@
 				</thead>
 				<tbody>
 
-					<tr ng-repeat="x in people | filter:search">
+					<tr ng-repeat="x in people | filter:search" ng-click="showInfo(x)">
 						<td>{{x.fname}}</td>
 						<td>{{x.lname}}</td>
 					</tr>
@@ -31,6 +31,12 @@
 				</tbody>
 			</table>
 		</div>
+
+		<div style="float:right;" ng-show="selected">
+			<h2>About &mdash; {{selected.fname + ' ' + selected.lname}}</h2>
+			<p>{{selected.bio}}</p>
+		</div>
+
 	</div>
 
 
