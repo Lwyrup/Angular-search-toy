@@ -11,6 +11,9 @@ app.controller('myCtrl', function($scope) {
 	    {fname:"Fred", lname:"Durst"},
 	    {fname:"Demetri", lname:"Martin"}
     ];
+    $scope.showInfo = function(x){
+    	$scope.selected = x;
+    };
 });
 
 app.directive("searchStatus", function(){
