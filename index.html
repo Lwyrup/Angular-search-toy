@@ -12,6 +12,12 @@
 		<h1>Search for someone</h1>
 		<input type="text" ng-model="search">
 
+		<div style="float:right; width:600px;" ng-show="selected">
+			<h2>About &mdash; {{selected.fname + ' ' + selected.lname}}</h2>
+			<p>{{selected.bio}}</p>
+			<a href="#" ng-click="clear()">Close</a>
+		</div>
+
 		<div ng-show="search">
 			<search-status></search-status>
 
@@ -33,10 +39,6 @@
 			</table>
 		</div>
 
-		<div style="float:right;" ng-show="selected">
-			<h2>About &mdash; {{selected.fname + ' ' + selected.lname}}</h2>
-			<p>{{selected.bio}}</p>
-		</div>
 
 	</div>
 
